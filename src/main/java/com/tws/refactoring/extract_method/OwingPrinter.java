@@ -16,8 +16,8 @@ public class OwingPrinter {
     }
 
     private void printDetails(String s, String s2) {
-        System.out.println(s);
-        System.out.println(s2);
+        System.out.print(s+"\n");
+        System.out.print(s2+"\n");
     }
 
     private double getOwings(Iterator<Order> elements, double outstanding) {
@@ -29,9 +29,9 @@ public class OwingPrinter {
     }
 
     private void printBanner() {
-        System.out.println ("*****************************");
-        System.out.println ("****** Customer totals ******");
-        System.out.println ("*****************************");
+        System.out.print ("*****************************\n");
+        System.out.print ("****** Customer totals ******\n");
+        System.out.print ("*****************************\n");
     }
 }
 
