@@ -8,10 +8,10 @@ public class PriceCalculator {
     public static final double SHIPPING_CAST_RATE = 0.1;
     public static final double SHIPING_COST_MAX = 100.0;
 
-    double getPrice(int quantity, int itemPrice) {
+    public double getPrice(int quantity, int itemPrice) {
         double discount = Math.max(MIN_DISCOUNT, quantity - BASE) * itemPrice * DISCOUNT_RATE;
         double shippingCost = Math.min(quantity * itemPrice * SHIPPING_CAST_RATE, SHIPING_COST_MAX);
-        int basePrice = quantity * itemPrice;
+        double basePrice = quantity * itemPrice;
         return basePrice - discount + shippingCost;
     }
 }
